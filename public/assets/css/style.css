@@ -4,9 +4,8 @@ html {
 body {
   background-image: url("../images/backgroundImg.jpg");
   min-height: 100vh;
-  background-position: 0px -300px;
+  background-position: -150px -500px;
   background-repeat: no-repeat;
-  background-size: 100%, 100%;
 }
 
 .main-container {
@@ -45,12 +44,9 @@ body {
   font-family: "Cinzel", serif;
   font-size: 72px;
 }
-#cinzelNav {
-  font-family: "Cinzel", serif;
-  font-size: 50px;
-}
+
 #garamond {
-  font-family: "Cormorant Garamond", serif;
+  font-family: "Cinzel", serif;
   font-size: 44px;
 }
 #garamondText {
@@ -67,7 +63,7 @@ body {
   font-family: "Cormorant Garamond", serif;
   font-size: 50px;
 }
-#garamondNav {
+#nav-bar {
   font-family: "Cormorant Garamond", serif;
-  font-size: 28px;
+  font-size: 20px;
 }
