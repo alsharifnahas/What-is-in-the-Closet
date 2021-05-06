@@ -1,88 +1,99 @@
 {{>nav-bar}}
 <main id="garamondText" class="container">
   <section class="column">
-    <h1 id="garamondTitle" class="has-text-centered">Your Closet</h1>
+    <h1 id="title" class="has-text-centered">Your Closet</h1>
   </section>
   <section class="columns">
-    <div class="column is-6">
+    <div class="column">
       {{!-- garment goes here --}}
 
-      <article class="tile is-parent has-text-grey-dark">
-        <div class="tile is-child box is-vertical has-background-light" style="box-shadow: none; border-radius: 0;">
-
-          <div class="column is-flex is-justify-content-center p-0 mb-1"><strong>Your Garments</strong></div>
-
-          <div class="tabs is-small is-centered">
-            <ul>
-              <a class="garment-view has-text-black-ter">All</a>
-
-              <a class="garment-view " data-name="Hats">
-                <span class="icon is-small">
-                  <i class="fas fa-hat-cowboy" aria-hidden="true"></i>
-                </span>
-                <span>Hats</span>
-              </a>
-              <a class="garment-view has-text-black-ter" data-name="Shirt">
-                <span class="icon is-small">
-                  <i class="fas fa-tshirt"></i>
-                </span>
-                <span>Shirt</span>
-              </a>
-              <a class="garment-view has-text-black-ter" data-name="Pants">
-                <i class="fas fa-drumstick-bite" aria-hidden="true"></i>
-                <span>Pants</span>
-              </a>
-              <a class="garment-view has-text-black-ter" data-name="Shoes">
-                <span class="icon is-small">
-                  <i class="fas fa-shoe-prints" aria-hidden="true"></i>
-                </span>
-                <span>Shoes</span>
-              </a>
-              <a class="garment-view has-text-black-ter" data-name="Outerwear">
-                <i class="fas fa-user-secret" aria-hidden="true"></i>
-                <span>Outerwear</span>
-              </a>
-            </ul>
-          </div>
-
-          {{#each garments}}
-          {{> closet-panel-block}}
-          {{/each}}
-        </div>
-      </article>
-    </div>
 
 
 
-    <div class="column">
-      <div class="tile is-parent">
-        <div class="tile is-child box" style="box-shadow: none; border-radius: 0;">
-          <h1 class="has-text-centered" style="font-weight: bold;">New Outfits</h1>
-          <div class="tile is-child is-vertical garment-tile"></div>
-          <div class="panel-block" id="Hats-box"></div>
-          <div class="panel-block" id="Shirt-box"></div>
-          <div class="panel-block" id="Pants-box"></div>
-          <div class="panel-block" id="Shoes-box"></div>
-          <div class="panel-block" id="Outerwear-box"></div>
-          {{!-- The new outfits goes here --}}
-          <div class="column p-0 mt-2">
-            <label> What do you want to name your outfit: </label>
-            <input type="text" placeholder="Outfit Name" class="outfit-name">
-          </div>
-          <div class="buttons is-small outfit-buttons mt-2">
 
-            <input class="button is-light is-small clear-clothes garamondText" type="reset"
-              value="Put these clothes back" />
-            <input class="button is-light is-small save-outfits garamondText" type="submit" value="Save this outfit!" />
+      <div class="tabs is-small is-centered">
+        <ul>
+          <a class="garment-view has-text-black-ter">All</a>
 
-          </div>
-        </div>
-
-
+          <a class="garment-view " data-name="Hats">
+            <span class="icon is-small">
+              <i class="fas fa-hat-cowboy" aria-hidden="true"></i>
+            </span>
+            <span>Hats</span>
+          </a>
+          <a class="garment-view has-text-black-ter" data-name="Shirt">
+            <span class="icon is-small">
+              <i class="fas fa-tshirt"></i>
+            </span>
+            <span>Shirt</span>
+          </a>
+          <a class="garment-view has-text-black-ter" data-name="Pants">
+            <i class="fas fa-drumstick-bite" aria-hidden="true"></i>
+            <span>Pants</span>
+          </a>
+          <a class="garment-view has-text-black-ter" data-name="Shoes">
+            <span class="icon is-small">
+              <i class="fas fa-shoe-prints" aria-hidden="true"></i>
+            </span>
+            <span>Shoes</span>
+          </a>
+          <a class="garment-view has-text-black-ter" data-name="Outerwear">
+            <i class="fas fa-user-secret" aria-hidden="true"></i>
+            <span>Outerwear</span>
+          </a>
+        </ul>
       </div>
+
+      <div class="columns is-flex-wrap-wrap" id="view-container">
+        {{#if garments}}
+        {{#each garments}}
+        {{> closet-panel-block}}
+        {{/each}}
+        {{else}}
+        <h1>No Garmnets available</h1>
+        {{/if}}
+      </div>
+
+
     </div>
+
     </div>
   </section>
 </main>
 
 <script src="/assets/js/closet-view.js"></script>
+
+{{!-- <aside class="menu">
+  <p class="menu-label">
+    General
+  </p>
+  <ul class="menu-list">
+    <li><a>Dashboard</a></li>
+    <li><a>Customers</a></li>
+  </ul>
+  <p class="menu-label">
+    Administration
+  </p>
+  <ul class="menu-list">
+    <li><a>Team Settings</a></li>
+    <li>
+      <a class="is-active">Manage Your Team</a>
+      <ul>
+        <li><a>Members</a></li>
+        <li><a>Plugins</a></li>
+        <li><a>Add a member</a></li>
+      </ul>
+    </li>
+    <li><a>Invitations</a></li>
+    <li><a>Cloud Storage Environment Settings</a></li>
+    <li><a>Authentication</a></li>
+  </ul>
+  <p class="menu-label">
+    Transactions
+  </p>
+  <ul class="menu-list">
+    <li><a>Payments</a></li>
+    <li><a>Transfers</a></li>
+    <li><a>Balance</a></li>
+  </ul>
+</aside> --}}

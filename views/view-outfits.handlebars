@@ -1,25 +1,19 @@
 {{>nav-bar}}
-<main class="container is-flex is-flex-direction-column is-justify-content-center" style="min-height: 80vh;">
-  <div class="columns">
-    <div class="column is-half">
-      <div class="tile is-parent">
-        <div class="tile is-child box is-vertical has-background-white outfits-container">
-          <div class="tabs is-centered">
-            <ul>
-              <li><strong>View Outfits</strong></li>
-            </ul>
-          </div>
-          {{#each outfits}}
-          {{> outfit-panel-block}}
-          {{/each}}
-        </div>
-      </div>
-    </div>
+<main class="container">
+  <h1 id="title" class="has-text-centered">Your Outfits</h1>
+  <div class="columns is-flex-wrap-wrap" id="view-container">
+
+
+    {{#each outfits}}
+    {{> outfit-panel-block}}
+    {{/each}}
+
+
 
 
     {{!-- edit outfits --}}
 
-    <div class="column is-half  one-outfit-container" style="">
+    {{!-- <div class="column is-half  one-outfit-container" style="">
       <div class="tile is-parent">
         <div class="tile is-child has-background-white outfits-container p-4">
           <div class="tabs is-meduim is-centered">
@@ -37,7 +31,7 @@
 
         </div>
       </div>
-    </div>
+    </div> --}}
     {{!-- end of the edit outfits container(tile) --}}
 
 

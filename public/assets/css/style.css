@@ -16,11 +16,6 @@ body {
   color: red;
   text-shadow: 0px 0px 40px #ff5e14, 0px 0px 40px #ff5e14;
 }
-.glow {
-  font: italic bold 22px Georgia, serif;
-  color: white;
-  text-shadow: 0px 0px 40px #39ff14, 0px 0px 40px #39ff14;
-}
 
 .outfits-container {
   box-shadow: none;
@@ -40,6 +35,10 @@ body {
 .one-outfit-container {
   box-shadow: none;
 }
+#click:hover {
+  cursor: pointer;
+}
+
 #cinzel {
   font-family: "Cinzel", serif;
   font-size: 72px;
@@ -59,11 +58,36 @@ body {
   font-family: "Cormorant Garamond", serif;
   font-size: 44px;
 }
-#garamondTitle {
-  font-family: "Cormorant Garamond", serif;
+#title {
+  font-family: "Cinzel", serif;
   font-size: 50px;
 }
 #nav-bar {
   font-family: "Cormorant Garamond", serif;
   font-size: 20px;
+}
+#view-container {
+  height: 80vh;
+  background-color: white;
+  overflow-y: scroll;
+  margin-bottom: 5px;
+}
+#outfit-container {
+  height: 70vh;
+  width: 60%;
+  background-color: white;
+  overflow-y: scroll;
+}
+#view-container::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+#view-container::-webkit-scrollbar-track {
+  background: #dfdfdf;
+}
+
+/* Handle */
+#view-container::-webkit-scrollbar-thumb {
+  background: rgb(64, 64, 64);
 }

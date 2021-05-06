@@ -42,7 +42,7 @@ $(document).ready(function () {
   });
 
   // listening to the add icon
-  $(".fa-plus").on("click", function () {
+  $(".plus").on("click", function () {
     const id = $(this).data("id");
     const name = $(this).data("name");
 
@@ -72,7 +72,7 @@ $(document).ready(function () {
    * Listening to the delete icon.
    * Deleting the garment based on the id
    */
-  $(".fa-trash-alt").on("click", function () {
+  $(".trash").on("click", function () {
     const id = $(this).data("id");
     const type = $(this).data("type");
     let currentSpot = JSON.parse(localStorage.getItem(type))
@@ -92,7 +92,7 @@ $(document).ready(function () {
   //   * Listening to the edit icon.
   //   * Redirecting to the edit garment page based on the id
   //   */
-  $(".fa-user-edit").on("click", function () {
+  $(".edit").on("click", function () {
     const id = $(this).data("id");
     location.href = "/garments/" + id + "/edit";
   });

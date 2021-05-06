@@ -29,7 +29,6 @@ router.get("/garments/:name", function (req, res) {
     },
   })
     .then((allGarments) => {
-      console.log(allGarments);
       res.render("view-closet", { garments: allGarments });
     })
     .catch((err) => {

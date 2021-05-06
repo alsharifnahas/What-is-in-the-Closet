@@ -1,15 +1,19 @@
-<a class="panel-block p-0" style="font-size: 14px;">
+<div class="column is-4" style="font-size: 14px;">
     {{!-- will be a shirt partial --}}
-    <div class="column">{{name}}</div>
-    <div class="column">
-        <span class="panel-icon add-icon is-pulled-right">
-            <i class="fas fa-plus" aria-hidden="true" data-id="{{id}}" data-name="{{name}}"></i>
+
+    <div class="column is-justify-content-center is-flex">{{name}}</div>
+    <div class="is-justify-content-center is-flex w-100">
+        <img src="https://bulma.io/images/placeholders/256x256.png">
+    </div>
+    <div class="column is-justify-content-center is-flex">
+        <span class="add mr-3 ml-3" data-id="{{id}}" id="click" data-name="{{name}}">
+            add
         </span>
-        <span class="panel-icon is-pulled-right">
-            <i class="fas fa-trash-alt" aria-hidden="true" data-id="{{id}}" data-type="{{type}}"></i>
+        <span class="trash mr-3 ml-3" data-id="{{id}}" id="click" data-type="{{type}}">
+            delete
         </span>
-        <span class="panel-icon is-pulled-right">
-            <i class="fas fa-user-edit" aria-hidden="true" data-id="{{id}}"></i>
+        <span class="edit mr-3 ml-3" id="click" data-id="{{id}}">
+            edit
         </span>
     </div>
-</a>
+</div>
